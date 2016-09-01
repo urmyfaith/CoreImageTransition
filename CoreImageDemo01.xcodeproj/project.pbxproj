@@ -13,6 +13,7 @@
 		FB31F0761D77B3F20032699C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0741D77B3F20032699C /* Main.storyboard */; };
 		FB31F0781D77B3F20032699C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0771D77B3F20032699C /* Assets.xcassets */; };
 		FB31F07B1D77B3F20032699C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0791D77B3F20032699C /* LaunchScreen.storyboard */; };
+		FB31F0831D77B4F80032699C /* no_filter_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0821D77B4F80032699C /* no_filter_2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FB31F0771D77B3F20032699C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB31F07A1D77B3F20032699C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB31F07C1D77B3F20032699C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB31F0821D77B4F80032699C /* no_filter_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_filter_2x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FB31F06A1D77B3F20032699C /* CoreImageDemo01 */ = {
 			isa = PBXGroup;
 			children = (
+				FB31F0821D77B4F80032699C /* no_filter_2x.png */,
 				FB31F06E1D77B3F20032699C /* AppDelegate.h */,
 				FB31F06F1D77B3F20032699C /* AppDelegate.m */,
 				FB31F0711D77B3F20032699C /* ViewController.h */,
@@ -138,6 +141,7 @@
 			files = (
 				FB31F07B1D77B3F20032699C /* LaunchScreen.storyboard in Resources */,
 				FB31F0781D77B3F20032699C /* Assets.xcassets in Resources */,
+				FB31F0831D77B4F80032699C /* no_filter_2x.png in Resources */,
 				FB31F0761D77B3F20032699C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

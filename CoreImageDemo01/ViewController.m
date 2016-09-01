@@ -26,7 +26,6 @@
     [self testAddHueFilter];
 
     [self testChainFilter];
-
 }
 
 

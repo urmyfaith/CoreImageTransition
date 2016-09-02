@@ -7,6 +7,7 @@
 //
 
 #import "AutoEnchanceViewController.h"
+#import "UIImage+Extension.h"
 
 @import ImageIO; //kCGImagePropertyOrientation属性在里面
 @import CoreImage;
@@ -44,7 +45,8 @@
         CIContext *context = [CIContext contextWithOptions:nil];
 
         NSDictionary *options = nil;
-
+//两种方法获取旋转方向.
+#if 0
         if([[self.inputImage properties] valueForKey:(__bridge NSString *)kCGImagePropertyOrientation] == nil)
         {
             options = @{CIDetectorImageOrientation : [NSNumber numberWithInt:1]};
@@ -53,7 +55,9 @@
         {
             options = @{CIDetectorImageOrientation : [[self.inputImage properties] valueForKey:(__bridge NSString *)kCGImagePropertyOrientation]};
         }
-
+#else
+        options =@{CIDetectorImageOrientation : @([self.centerImageView.image getCGImagePropertyOrientation])};
+#endif
         NSArray *adjustments = [self.inputImage autoAdjustmentFiltersWithOptions:options];
         for (CIFilter *filter in adjustments) {
             [filter setValue:self.inputImage forKey:kCIInputImageKey];
@@ -64,4 +68,6 @@
         self.resultIamgeView.image = [UIImage imageWithCGImage:cgImage];
     });
 }
+
+
 @end

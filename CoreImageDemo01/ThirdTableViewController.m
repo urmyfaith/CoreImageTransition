@@ -10,6 +10,7 @@
 
 
 #import "FaceDetectViewController.h"
+#import "AutoEnchanceViewController.h"
 
 typedef void (^BlockAction)(void);
 
@@ -29,6 +30,13 @@ typedef void (^BlockAction)(void);
                            @"title":@"人脸检测",
                            @"action":^(void ){
                                FaceDetectViewController *vc = [[FaceDetectViewController alloc] init];
+                               [weakSelf.navigationController pushViewController:vc animated:YES];
+                           }
+                        },
+                       @{
+                           @"title":@"自动增强",
+                           @"action":^(void ){
+                               AutoEnchanceViewController *vc = [[AutoEnchanceViewController alloc] init];
                                [weakSelf.navigationController pushViewController:vc animated:YES];
                            }
                            },

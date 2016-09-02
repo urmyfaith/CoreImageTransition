@@ -21,6 +21,7 @@
 		FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B081D790B6A00175396 /* FaceDetectViewController.m */; };
 		FBA54B0B1D790BAD00175396 /* Faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA54B0A1D790BAD00175396 /* Faces.jpg */; };
 		FBA54B0F1D7913BC00175396 /* CIFaceFeature+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B0E1D7913BC00175396 /* CIFaceFeature+Extension.m */; };
+		FBA54B121D793FF000175396 /* AutoEnchanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B111D793FF000175396 /* AutoEnchanceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		FBA54B0A1D790BAD00175396 /* Faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Faces.jpg; sourceTree = "<group>"; };
 		FBA54B0D1D7913BC00175396 /* CIFaceFeature+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIFaceFeature+Extension.h"; sourceTree = "<group>"; };
 		FBA54B0E1D7913BC00175396 /* CIFaceFeature+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CIFaceFeature+Extension.m"; sourceTree = "<group>"; };
+		FBA54B101D793FF000175396 /* AutoEnchanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoEnchanceViewController.h; sourceTree = "<group>"; };
+		FBA54B111D793FF000175396 /* AutoEnchanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoEnchanceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				FB31F0891D77D3080032699C /* SecondViewController.m */,
 				FBA54B041D790A6400175396 /* ThirdTableViewController.h */,
 				FBA54B051D790A6400175396 /* ThirdTableViewController.m */,
+				FBA54B101D793FF000175396 /* AutoEnchanceViewController.h */,
+				FBA54B111D793FF000175396 /* AutoEnchanceViewController.m */,
 				FBA54B0C1D790BB300175396 /* FaceDector */,
 				FB31F0741D77B3F20032699C /* Main.storyboard */,
 				FB31F0771D77B3F20032699C /* Assets.xcassets */,
@@ -197,6 +202,7 @@
 				FB31F0731D77B3F20032699C /* ViewController.m in Sources */,
 				FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */,
 				FB31F0701D77B3F20032699C /* AppDelegate.m in Sources */,
+				FBA54B121D793FF000175396 /* AutoEnchanceViewController.m in Sources */,
 				FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */,
 				FBA54B0F1D7913BC00175396 /* CIFaceFeature+Extension.m in Sources */,
 				FB31F06D1D77B3F20032699C /* main.m in Sources */,

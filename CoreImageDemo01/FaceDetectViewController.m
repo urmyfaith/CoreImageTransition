@@ -59,6 +59,7 @@
     for (CIFaceFeature *f in features) {
         NSLog(@"%@",f);
         [self addShapeLayerAtFrame:f.bounds];
+
     }
 }
 

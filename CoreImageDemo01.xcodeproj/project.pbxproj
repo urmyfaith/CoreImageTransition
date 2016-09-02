@@ -17,6 +17,10 @@
 		FB31F0861D77D17F0032699C /* boots.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0841D77D17F0032699C /* boots.jpg */; };
 		FB31F0871D77D17F0032699C /* skier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0851D77D17F0032699C /* skier.jpg */; };
 		FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31F0891D77D3080032699C /* SecondViewController.m */; };
+		FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B051D790A6400175396 /* ThirdTableViewController.m */; };
+		FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B081D790B6A00175396 /* FaceDetectViewController.m */; };
+		FBA54B0B1D790BAD00175396 /* Faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA54B0A1D790BAD00175396 /* Faces.jpg */; };
+		FBA54B0F1D7913BC00175396 /* CIFaceFeature+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B0E1D7913BC00175396 /* CIFaceFeature+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,13 @@
 		FB31F0851D77D17F0032699C /* skier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skier.jpg; sourceTree = "<group>"; };
 		FB31F0881D77D3080032699C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FB31F0891D77D3080032699C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FBA54B041D790A6400175396 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
+		FBA54B051D790A6400175396 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
+		FBA54B071D790B6A00175396 /* FaceDetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectViewController.h; sourceTree = "<group>"; };
+		FBA54B081D790B6A00175396 /* FaceDetectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetectViewController.m; sourceTree = "<group>"; };
+		FBA54B0A1D790BAD00175396 /* Faces.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Faces.jpg; sourceTree = "<group>"; };
+		FBA54B0D1D7913BC00175396 /* CIFaceFeature+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIFaceFeature+Extension.h"; sourceTree = "<group>"; };
+		FBA54B0E1D7913BC00175396 /* CIFaceFeature+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CIFaceFeature+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,9 @@
 				FB31F0721D77B3F20032699C /* ViewController.m */,
 				FB31F0881D77D3080032699C /* SecondViewController.h */,
 				FB31F0891D77D3080032699C /* SecondViewController.m */,
+				FBA54B041D790A6400175396 /* ThirdTableViewController.h */,
+				FBA54B051D790A6400175396 /* ThirdTableViewController.m */,
+				FBA54B0C1D790BB300175396 /* FaceDector */,
 				FB31F0741D77B3F20032699C /* Main.storyboard */,
 				FB31F0771D77B3F20032699C /* Assets.xcassets */,
 				FB31F0791D77B3F20032699C /* LaunchScreen.storyboard */,
@@ -91,6 +105,18 @@
 				FB31F06C1D77B3F20032699C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBA54B0C1D790BB300175396 /* FaceDector */ = {
+			isa = PBXGroup;
+			children = (
+				FBA54B071D790B6A00175396 /* FaceDetectViewController.h */,
+				FBA54B081D790B6A00175396 /* FaceDetectViewController.m */,
+				FBA54B0D1D7913BC00175396 /* CIFaceFeature+Extension.h */,
+				FBA54B0E1D7913BC00175396 /* CIFaceFeature+Extension.m */,
+				FBA54B0A1D790BAD00175396 /* Faces.jpg */,
+			);
+			name = FaceDector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +180,7 @@
 				FB31F0781D77B3F20032699C /* Assets.xcassets in Resources */,
 				FB31F0831D77B4F80032699C /* no_filter_2x.png in Resources */,
 				FB31F0861D77D17F0032699C /* boots.jpg in Resources */,
+				FBA54B0B1D790BAD00175396 /* Faces.jpg in Resources */,
 				FB31F0871D77D17F0032699C /* skier.jpg in Resources */,
 				FB31F0761D77B3F20032699C /* Main.storyboard in Resources */,
 			);
@@ -168,7 +195,10 @@
 			files = (
 				FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */,
 				FB31F0731D77B3F20032699C /* ViewController.m in Sources */,
+				FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */,
 				FB31F0701D77B3F20032699C /* AppDelegate.m in Sources */,
+				FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */,
+				FBA54B0F1D7913BC00175396 /* CIFaceFeature+Extension.m in Sources */,
 				FB31F06D1D77B3F20032699C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

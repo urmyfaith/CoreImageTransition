@@ -23,6 +23,7 @@
 		FBA54B0F1D7913BC00175396 /* CIFaceFeature+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B0E1D7913BC00175396 /* CIFaceFeature+Extension.m */; };
 		FBA54B121D793FF000175396 /* AutoEnchanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B111D793FF000175396 /* AutoEnchanceViewController.m */; };
 		FBA54B181D79566D00175396 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B171D79566D00175396 /* UIImage+Extension.m */; };
+		FBA54B1C1D79695300175396 /* CIColorInvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B1B1D79695300175396 /* CIColorInvertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		FBA54B111D793FF000175396 /* AutoEnchanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoEnchanceViewController.m; sourceTree = "<group>"; };
 		FBA54B161D79566D00175396 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		FBA54B171D79566D00175396 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		FBA54B1A1D79695300175396 /* CIColorInvertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIColorInvertViewController.h; sourceTree = "<group>"; };
+		FBA54B1B1D79695300175396 /* CIColorInvertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIColorInvertViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 				FBA54B161D79566D00175396 /* UIImage+Extension.h */,
 				FBA54B171D79566D00175396 /* UIImage+Extension.m */,
 				FBA54B0C1D790BB300175396 /* FaceDector */,
+				FBA54B191D79693600175396 /* subclass */,
 				FB31F0741D77B3F20032699C /* Main.storyboard */,
 				FB31F0771D77B3F20032699C /* Assets.xcassets */,
 				FB31F0791D77B3F20032699C /* LaunchScreen.storyboard */,
@@ -127,6 +131,15 @@
 				FBA54B0A1D790BAD00175396 /* Faces.jpg */,
 			);
 			name = FaceDector;
+			sourceTree = "<group>";
+		};
+		FBA54B191D79693600175396 /* subclass */ = {
+			isa = PBXGroup;
+			children = (
+				FBA54B1A1D79695300175396 /* CIColorInvertViewController.h */,
+				FBA54B1B1D79695300175396 /* CIColorInvertViewController.m */,
+			);
+			name = subclass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA54B1C1D79695300175396 /* CIColorInvertViewController.m in Sources */,
 				FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */,
 				FB31F0731D77B3F20032699C /* ViewController.m in Sources */,
 				FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */,

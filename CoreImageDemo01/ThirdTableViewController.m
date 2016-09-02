@@ -11,7 +11,7 @@
 
 #import "FaceDetectViewController.h"
 #import "AutoEnchanceViewController.h"
-
+#import "CIColorInvertViewController.h"
 typedef void (^BlockAction)(void);
 
 
@@ -37,6 +37,13 @@ typedef void (^BlockAction)(void);
                            @"title":@"自动增强",
                            @"action":^(void ){
                                AutoEnchanceViewController *vc = [[AutoEnchanceViewController alloc] init];
+                               [weakSelf.navigationController pushViewController:vc animated:YES];
+                           }
+                           },
+                       @{
+                           @"title":@"自定义滤镜-翻转颜色",
+                           @"action":^(void ){
+                               CIColorInvertViewController *vc = [[CIColorInvertViewController alloc] init];
                                [weakSelf.navigationController pushViewController:vc animated:YES];
                            }
                            },

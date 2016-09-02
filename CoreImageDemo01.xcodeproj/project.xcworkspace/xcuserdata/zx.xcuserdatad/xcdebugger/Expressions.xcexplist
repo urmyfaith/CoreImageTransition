@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__41-[AutoEnchanceViewController viewDidLoad]_block_invoke:AutoEnchanceViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.inputImage.properties">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

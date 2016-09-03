@@ -71,6 +71,7 @@
         CIImage *result = [filter valueForKey: kCIOutputImageKey];
         CGImageRef cgImage = [context createCGImage:result fromRect:self.inputImage.extent];
         self.resultIamgeView.image = [UIImage imageWithCGImage:cgImage];
+        CGImageRelease(cgImage);
     });
 }
 @end

@@ -66,6 +66,7 @@
 
         CGImageRef cgImage = [context createCGImage:self.inputImage fromRect:self.inputImage.extent];
         self.resultIamgeView.image = [UIImage imageWithCGImage:cgImage];
+        CGImageRelease(cgImage);
     });
 }
 

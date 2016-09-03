@@ -7,33 +7,7 @@
 //
 
 #import "ChromaKeyFilterVC.h"
-
-static void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v )
-{
-    float min, max, delta;
-    min = MIN( r, MIN( g, b ));
-    max = MAX( r, MAX( g, b ));
-    *v = max;               // v
-    delta = max - min;
-    if( max != 0 )
-        *s = delta / max;       // s
-    else {
-        // r = g = b = 0        // s = 0, v is undefined
-        *s = 0;
-        *h = -1;
-        return;
-    }
-    if( r == max )
-        *h = ( g - b ) / delta;     // between yellow & magenta
-    else if( g == max )
-        *h = 2 + ( b - r ) / delta; // between cyan & yellow
-    else
-        *h = 4 + ( r - g ) / delta; // between magenta & cyan
-    *h *= 60;               // degrees
-    if( *h < 0 )
-        *h += 360;
-}
-
+#import "ChromaKeyFilter.h"
 
 @import CoreImage;
 
@@ -68,49 +42,25 @@ static void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v )
 
 -(void)testChromaKeyFilter
 {
+    ChromaKeyFilter *chromaKeyFilter = [ChromaKeyFilter new];
+    [chromaKeyFilter setValue:self.inputImage forKey:kCIInputImageKey];
+    CIImage *result = [chromaKeyFilter valueForKey: kCIOutputImageKey];
 
-    const unsigned int size = 64;
+    //如果想只是去掉背景颜色,可以把下面的开关关闭(0),不进行叠加.
+#if 1
+    CIFilter *overComposeFilter = [CIFilter filterWithName:@"CISourceOverCompositing"];
+    [overComposeFilter setValue:result forKey:kCIInputImageKey];
 
-    //生成一个三维数组,线性填充 r,b,g,然后转换为 HSV.
-    //通过 HSV 判断绿色范围
-    //最后添加透明度.
-
-    NSUInteger cubeDataSize = size * size * size * 4 * sizeof(float);
-    float *cubeData = (float *)malloc (cubeDataSize);
-    float rgb[3], hsv[3], *c = cubeData;
-    for (int z = 0; z < size; z++){
-        rgb[2] = ((double)z)/(size-1);
-        for (int y = 0; y < size; y++){
-            rgb[1] = ((double)y)/(size-1);
-            for (int x = 0; x < size; x ++){
-                rgb[0] = ((double)x)/(size-1);
-
-                RGBtoHSV(rgb[0],rgb[1],rgb[2] ,&hsv[0],&hsv[1],&hsv[2]);
-                float alpha = (hsv[0] > 90 && hsv[0] < 140) ? 0.0f: 1.0f;
-
-                c[0] = rgb[0] * alpha;
-                c[1] = rgb[1] * alpha;
-                c[2] = rgb[2] * alpha;
-                c[3] = alpha;
-                c += 4;
-            }
-        }
-    }
-
-    NSData *data = [NSData dataWithBytesNoCopy:cubeData
-                                        length:cubeDataSize
-                                  freeWhenDone:YES];
-    CIFilter *colorCube = [CIFilter filterWithName:@"CIColorCube"];
-    [colorCube setValue:@(size) forKey:@"inputCubeDimension"];
-    [colorCube setValue:data forKey:@"inputCubeData"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"beach@2x" ofType:@"png"];
+    CIImage *bgImage = [CIImage imageWithContentsOfURL:[NSURL fileURLWithPath:filePath]];
+    [overComposeFilter setValue:bgImage forKey:kCIInputBackgroundImageKey];
+    result = [overComposeFilter valueForKey:kCIOutputImageKey];
+#endif
 
     CIContext *context = [CIContext contextWithOptions:nil];
-
-    [colorCube setValue:self.inputImage forKey:kCIInputImageKey];
-
-    CIImage *result = [colorCube valueForKey: kCIOutputImageKey];
     CGImageRef cgImage = [context createCGImage:result fromRect:self.inputImage.extent];
     self.resultIamgeView.image = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
 
 }
 @end

@@ -73,6 +73,7 @@
 
     id vc = [[NSClassFromString(vcName) alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 #pragma mark - Table view data source

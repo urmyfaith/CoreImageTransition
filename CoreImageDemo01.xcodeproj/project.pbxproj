@@ -17,6 +17,9 @@
 		FB31F0861D77D17F0032699C /* boots.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0841D77D17F0032699C /* boots.jpg */; };
 		FB31F0871D77D17F0032699C /* skier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0851D77D17F0032699C /* skier.jpg */; };
 		FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31F0891D77D3080032699C /* SecondViewController.m */; };
+		FB8727321D7A596C004B9456 /* ChromaKeyFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8727311D7A596C004B9456 /* ChromaKeyFilterVC.m */; };
+		FB8727341D7A668C004B9456 /* person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8727331D7A668C004B9456 /* person@2x.png */; };
+		FB8727361D7A6693004B9456 /* beach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8727351D7A6693004B9456 /* beach@2x.png */; };
 		FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B051D790A6400175396 /* ThirdTableViewController.m */; };
 		FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B081D790B6A00175396 /* FaceDetectViewController.m */; };
 		FBA54B0B1D790BAD00175396 /* Faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA54B0A1D790BAD00175396 /* Faces.jpg */; };
@@ -42,6 +45,10 @@
 		FB31F0851D77D17F0032699C /* skier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skier.jpg; sourceTree = "<group>"; };
 		FB31F0881D77D3080032699C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FB31F0891D77D3080032699C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FB8727301D7A596C004B9456 /* ChromaKeyFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChromaKeyFilterVC.h; path = Subclssing/ChromaKeyFilterVC.h; sourceTree = "<group>"; };
+		FB8727311D7A596C004B9456 /* ChromaKeyFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChromaKeyFilterVC.m; path = Subclssing/ChromaKeyFilterVC.m; sourceTree = "<group>"; };
+		FB8727331D7A668C004B9456 /* person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person@2x.png"; sourceTree = "<group>"; };
+		FB8727351D7A6693004B9456 /* beach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beach@2x.png"; sourceTree = "<group>"; };
 		FBA54B041D790A6400175396 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
 		FBA54B051D790A6400175396 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 		FBA54B071D790B6A00175396 /* FaceDetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectViewController.h; sourceTree = "<group>"; };
@@ -138,6 +145,10 @@
 			children = (
 				FBA54B1A1D79695300175396 /* CIColorInvertViewController.h */,
 				FBA54B1B1D79695300175396 /* CIColorInvertViewController.m */,
+				FB8727301D7A596C004B9456 /* ChromaKeyFilterVC.h */,
+				FB8727311D7A596C004B9456 /* ChromaKeyFilterVC.m */,
+				FB8727351D7A6693004B9456 /* beach@2x.png */,
+				FB8727331D7A668C004B9456 /* person@2x.png */,
 			);
 			name = subclass;
 			sourceTree = "<group>";
@@ -199,10 +210,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8727361D7A6693004B9456 /* beach@2x.png in Resources */,
 				FB31F07B1D77B3F20032699C /* LaunchScreen.storyboard in Resources */,
 				FB31F0781D77B3F20032699C /* Assets.xcassets in Resources */,
 				FB31F0831D77B4F80032699C /* no_filter_2x.png in Resources */,
 				FB31F0861D77D17F0032699C /* boots.jpg in Resources */,
+				FB8727341D7A668C004B9456 /* person@2x.png in Resources */,
 				FBA54B0B1D790BAD00175396 /* Faces.jpg in Resources */,
 				FB31F0871D77D17F0032699C /* skier.jpg in Resources */,
 				FB31F0761D77B3F20032699C /* Main.storyboard in Resources */,
@@ -217,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA54B1C1D79695300175396 /* CIColorInvertViewController.m in Sources */,
+				FB8727321D7A596C004B9456 /* ChromaKeyFilterVC.m in Sources */,
 				FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */,
 				FB31F0731D77B3F20032699C /* ViewController.m in Sources */,
 				FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */,

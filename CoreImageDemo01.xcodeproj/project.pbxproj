@@ -25,6 +25,7 @@
 		FB8727651D7AC0E5004B9456 /* IMG_20140503_131215.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB8727641D7AC0E5004B9456 /* IMG_20140503_131215.jpg */; };
 		FB8727681D7AC483004B9456 /* TiltShiftFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8727671D7AC483004B9456 /* TiltShiftFilterVC.m */; };
 		FB87276B1D7AD26A004B9456 /* JPTiltShift.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87276A1D7AD26A004B9456 /* JPTiltShift.m */; };
+		FB87276E1D7AD52C004B9456 /* AnonymousFaceFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87276D1D7AD52C004B9456 /* AnonymousFaceFilterVC.m */; };
 		FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B051D790A6400175396 /* ThirdTableViewController.m */; };
 		FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B081D790B6A00175396 /* FaceDetectViewController.m */; };
 		FBA54B0B1D790BAD00175396 /* Faces.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA54B0A1D790BAD00175396 /* Faces.jpg */; };
@@ -63,6 +64,8 @@
 		FB8727671D7AC483004B9456 /* TiltShiftFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiltShiftFilterVC.m; path = Subclssing/TiltShiftFilterVC.m; sourceTree = "<group>"; };
 		FB8727691D7AD26A004B9456 /* JPTiltShift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPTiltShift.h; sourceTree = "<group>"; };
 		FB87276A1D7AD26A004B9456 /* JPTiltShift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTiltShift.m; sourceTree = "<group>"; };
+		FB87276C1D7AD52C004B9456 /* AnonymousFaceFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnonymousFaceFilterVC.h; path = Subclssing/AnonymousFaceFilterVC.h; sourceTree = "<group>"; };
+		FB87276D1D7AD52C004B9456 /* AnonymousFaceFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnonymousFaceFilterVC.m; path = Subclssing/AnonymousFaceFilterVC.m; sourceTree = "<group>"; };
 		FBA54B041D790A6400175396 /* ThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewController.h; sourceTree = "<group>"; };
 		FBA54B051D790A6400175396 /* ThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewController.m; sourceTree = "<group>"; };
 		FBA54B071D790B6A00175396 /* FaceDetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectViewController.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				FB8727671D7AC483004B9456 /* TiltShiftFilterVC.m */,
 				FB8727691D7AD26A004B9456 /* JPTiltShift.h */,
 				FB87276A1D7AD26A004B9456 /* JPTiltShift.m */,
+				FB87276C1D7AD52C004B9456 /* AnonymousFaceFilterVC.h */,
+				FB87276D1D7AD52C004B9456 /* AnonymousFaceFilterVC.m */,
 				FB8727641D7AC0E5004B9456 /* IMG_20140503_131215.jpg */,
 				FB8727351D7A6693004B9456 /* beach@2x.png */,
 				FB8727331D7A668C004B9456 /* person@2x.png */,
@@ -262,6 +267,7 @@
 				FB31F0701D77B3F20032699C /* AppDelegate.m in Sources */,
 				FBA54B121D793FF000175396 /* AutoEnchanceViewController.m in Sources */,
 				FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */,
+				FB87276E1D7AD52C004B9456 /* AnonymousFaceFilterVC.m in Sources */,
 				FB87276B1D7AD26A004B9456 /* JPTiltShift.m in Sources */,
 				FBA54B181D79566D00175396 /* UIImage+Extension.m in Sources */,
 				FB8727681D7AC483004B9456 /* TiltShiftFilterVC.m in Sources */,

@@ -15,6 +15,7 @@
 #import "ChromaKeyFilterVC.h"
 #import "WhiteVignetteFaceViewController.h"
 #import "TiltShiftFilterVC.h"
+#import "AnonymousFaceFilterVC.h"
 
 @interface ThirdTableViewController ()
 @property (nonatomic,strong) NSArray *dataArray;
@@ -49,6 +50,10 @@
                        @{
                            @"title":@"自定义滤镜-移轴效果",
                            @"vcName":@"TiltShiftFilterVC",
+                           },
+                       @{
+                           @"title":@"自定义滤镜-马赛克",
+                           @"vcName":@"AnonymousFaceFilterVC",
                            },
                        ];
 

@@ -17,6 +17,7 @@
 #import "TiltShiftFilterVC.h"
 #import "AnonymousFaceFilterVC.h"
 #import "PixellateTransitionFilterVC.h"
+#import "CICategoryColorAdjusmentVC.h"
 
 @interface ThirdTableViewController ()
 @property (nonatomic,strong) NSArray *dataArray;
@@ -60,6 +61,10 @@
                            @"title":@"自定义滤镜-溶解转场",
                            @"vcName":@"PixellateTransitionFilterVC",
                            },
+                       @{
+                           @"title":@"CICategoryColorAdjusment",
+                           @"vcName":@"CICategoryColorAdjusmentVC",
+                           },
                        ];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -92,6 +97,7 @@
     NSString *vcName = self.dataArray[indexPath.row][@"vcName"];
 
     id vc = [[NSClassFromString(vcName) alloc] init];
+    [vc setTitle:vcName];
     [self.navigationController pushViewController:vc animated:YES];
 
 }

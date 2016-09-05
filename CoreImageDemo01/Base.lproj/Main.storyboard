@@ -139,7 +139,7 @@
         <!--Item-->
         <scene sceneID="gST-DL-xx6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dy0-8i-nv0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Dy0-8i-nv0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ydG-Rq-ttj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tsd-SG-PKU">

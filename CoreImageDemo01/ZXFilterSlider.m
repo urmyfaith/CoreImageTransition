@@ -73,11 +73,14 @@
 
         if ([key hasPrefix:@"input"]) {
             id value = [filterAttributes valueForKey:key];
+            NSLog(@"key=%@,value=%@",key,value);
             if ([value isKindOfClass:[NSDictionary class]]) {
                 NSString *attributeClassString = [value valueForKey:@"CIAttributeClass"];
-                NSLog(@"key=%@,calss=%@",key,attributeClassString);
+                NSLog(@"calss=%@",attributeClassString);
                 if ([attributeClassString isEqualToString:@"NSNumber"]) {
                     [editableAttributes setObject:value forKey:key];
+                }else{
+                 NSLog(@"calss=%@",attributeClassString);
                 }
             }
         }

@@ -40,6 +40,11 @@
 		FBA54B121D793FF000175396 /* AutoEnchanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B111D793FF000175396 /* AutoEnchanceViewController.m */; };
 		FBA54B181D79566D00175396 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B171D79566D00175396 /* UIImage+Extension.m */; };
 		FBA54B1C1D79695300175396 /* CIColorInvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA54B1B1D79695300175396 /* CIColorInvertViewController.m */; };
+		FBC264A91D98E8310062872D /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC264A81D98E8310062872D /* OverlayViewController.m */; };
+		FBC264AB1D98E9890062872D /* overlay_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBC264AA1D98E9890062872D /* overlay_bg.jpg */; };
+		FBC264AE1D98EAC20062872D /* overlay_fg.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC264AD1D98EAC20062872D /* overlay_fg.png */; };
+		FBC264B11D98EB340062872D /* OverLayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC264B01D98EB340062872D /* OverLayDetailViewController.m */; };
+		FBC264B31D98F7510062872D /* filter.md in Sources */ = {isa = PBXBuildFile; fileRef = FBC264B21D98F7510062872D /* filter.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +106,13 @@
 		FBA54B171D79566D00175396 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		FBA54B1A1D79695300175396 /* CIColorInvertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIColorInvertViewController.h; sourceTree = "<group>"; };
 		FBA54B1B1D79695300175396 /* CIColorInvertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIColorInvertViewController.m; sourceTree = "<group>"; };
+		FBC264A71D98E8310062872D /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayViewController.h; path = overLay/OverlayViewController.h; sourceTree = "<group>"; };
+		FBC264A81D98E8310062872D /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayViewController.m; path = overLay/OverlayViewController.m; sourceTree = "<group>"; };
+		FBC264AA1D98E9890062872D /* overlay_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = overlay_bg.jpg; path = overLay/overlay_bg.jpg; sourceTree = "<group>"; };
+		FBC264AD1D98EAC20062872D /* overlay_fg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay_fg.png; path = overLay/overlay_fg.png; sourceTree = "<group>"; };
+		FBC264AF1D98EB340062872D /* OverLayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverLayDetailViewController.h; path = overLay/OverLayDetailViewController.h; sourceTree = "<group>"; };
+		FBC264B01D98EB340062872D /* OverLayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverLayDetailViewController.m; path = overLay/OverLayDetailViewController.m; sourceTree = "<group>"; };
+		FBC264B21D98F7510062872D /* filter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = filter.md; path = overLay/filter.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +188,7 @@
 				FBA54B191D79693600175396 /* subclass */,
 				FB9D98431D7D2464008F944A /* MicPaint */,
 				FB9D984E1D7D4B5D008F944A /* ColorAdjustment */,
+				FBC264A61D98E7E00062872D /* overLay */,
 				FB31F0741D77B3F20032699C /* Main.storyboard */,
 				FB31F0771D77B3F20032699C /* Assets.xcassets */,
 				FB31F0791D77B3F20032699C /* LaunchScreen.storyboard */,
@@ -251,6 +264,28 @@
 			name = subclass;
 			sourceTree = "<group>";
 		};
+		FBC264A61D98E7E00062872D /* overLay */ = {
+			isa = PBXGroup;
+			children = (
+				FBC264AC1D98E98C0062872D /* images */,
+				FBC264A71D98E8310062872D /* OverlayViewController.h */,
+				FBC264A81D98E8310062872D /* OverlayViewController.m */,
+				FBC264AF1D98EB340062872D /* OverLayDetailViewController.h */,
+				FBC264B01D98EB340062872D /* OverLayDetailViewController.m */,
+				FBC264B21D98F7510062872D /* filter.md */,
+			);
+			name = overLay;
+			sourceTree = "<group>";
+		};
+		FBC264AC1D98E98C0062872D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FBC264AD1D98EAC20062872D /* overlay_fg.png */,
+				FBC264AA1D98E9890062872D /* overlay_bg.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +320,7 @@
 				TargetAttributes = {
 					FB31F0671D77B3F20032699C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = HMPLSA9ZYN;
 					};
 				};
 			};
@@ -313,6 +349,8 @@
 			files = (
 				FB8727361D7A6693004B9456 /* beach@2x.png in Resources */,
 				FB31F07B1D77B3F20032699C /* LaunchScreen.storyboard in Resources */,
+				FBC264AB1D98E9890062872D /* overlay_bg.jpg in Resources */,
+				FBC264AE1D98EAC20062872D /* overlay_fg.png in Resources */,
 				FB31F0781D77B3F20032699C /* Assets.xcassets in Resources */,
 				FB8727651D7AC0E5004B9456 /* IMG_20140503_131215.jpg in Resources */,
 				FB31F0831D77B4F80032699C /* no_filter_2x.png in Resources */,
@@ -383,13 +421,16 @@
 				FB87275C1D7AA455004B9456 /* ChromaKeyFilter.m in Sources */,
 				FB8727321D7A596C004B9456 /* ChromaKeyFilterVC.m in Sources */,
 				FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */,
+				FBC264B31D98F7510062872D /* filter.md in Sources */,
 				FB9D98601D7D6CE8008F944A /* CICategoryColorAdjusmentVC.m in Sources */,
 				FB31F0731D77B3F20032699C /* ViewController.m in Sources */,
 				FBA54B061D790A6400175396 /* ThirdTableViewController.m in Sources */,
+				FBC264A91D98E8310062872D /* OverlayViewController.m in Sources */,
 				FB31F0701D77B3F20032699C /* AppDelegate.m in Sources */,
 				FBA54B121D793FF000175396 /* AutoEnchanceViewController.m in Sources */,
 				FBA54B091D790B6A00175396 /* FaceDetectViewController.m in Sources */,
 				FB87276E1D7AD52C004B9456 /* AnonymousFaceFilterVC.m in Sources */,
+				FBC264B11D98EB340062872D /* OverLayDetailViewController.m in Sources */,
 				FB9D98511D7D51CF008F944A /* ZXSlider.m in Sources */,
 				FB87276B1D7AD26A004B9456 /* JPTiltShift.m in Sources */,
 				FBA54B181D79566D00175396 /* UIImage+Extension.m in Sources */,
@@ -515,6 +556,7 @@
 			baseConfigurationReference = 7BBD0BE4A3CAD54DA3625C89 /* Pods-CoreImageDemo01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HMPLSA9ZYN;
 				INFOPLIST_FILE = CoreImageDemo01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -528,6 +570,7 @@
 			baseConfigurationReference = 3E250FA2B461BABE9A2013DA /* Pods-CoreImageDemo01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HMPLSA9ZYN;
 				INFOPLIST_FILE = CoreImageDemo01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

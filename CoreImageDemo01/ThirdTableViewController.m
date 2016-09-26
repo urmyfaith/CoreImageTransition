@@ -65,6 +65,10 @@
                            @"title":@"CICategoryColorAdjusment",
                            @"vcName":@"CICategoryColorAdjusmentVC",
                            },
+                       @{
+                           @"title":@"图片叠加",
+                           @"vcName":@"OverlayViewController",
+                           },
                        ];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;

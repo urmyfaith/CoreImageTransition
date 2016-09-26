@@ -15,6 +15,13 @@
     CGSize _bgImageSize;
     CGSize _fgImageSize;
 }
+@property(nonatomic, strong) CIImage *orignal_fgImage;
+@property(nonatomic, strong) CIImage *bgImage;
+@property(nonatomic, strong) CIImage *fgImage;
+
+@property(nonatomic, strong) CIFilter *filter;
+@property(nonatomic, strong) CIContext *context;
+
 @property(nonatomic, strong) UIImageView *centerImageView;
 @property(nonatomic, strong) UIView *rectView;
 @end
@@ -34,6 +41,8 @@
 
     [self configRectView];
 
+    self.filter = [CIFilter filterWithName:self.filterName];
+    self.context = [CIContext contextWithOptions:nil];
     [self addFilter];
 }
 
@@ -54,10 +63,12 @@
     NSURL *URL2 = [[NSBundle mainBundle] URLForResource:@"overlay_bg" withExtension:@"jpg"];
     CIImage *bgImage = [[CIImage alloc] initWithContentsOfURL:URL2];
     _bgImageSize = bgImage.extent.size;
+    self.bgImage =bgImage;
 
     NSURL *URL1 = [[NSBundle mainBundle] URLForResource:@"overlay_fg" withExtension:@"png"];
     CIImage * inputImage = [[CIImage alloc] initWithContentsOfURL:URL1];
-
+    self.orignal_fgImage = inputImage;
+    self.fgImage = inputImage;
     _fgImageSize = inputImage.extent.size;
 }
 
@@ -68,7 +79,7 @@
 
     if (CGRectContainsPoint(self.rectView.frame, point)) {
         CGPoint targatPoint = [touch locationInView:self.rectView];
-        NSLog(@"%@",NSStringFromCGPoint(targatPoint));
+//        NSLog(@"触摸点%@",NSStringFromCGPoint(targatPoint));
 
 //        targatPoint.x                                   z
 //        ------------                    ==          ----------
@@ -80,6 +91,7 @@
         _translationX = scaleX * targatPoint.x ;
         _translationY = scaleY * (self.rectView.frame.size.height - targatPoint.y);
 
+//        NSLog(@"转换后点%@",NSStringFromCGPoint(CGPointMake(_translationX, _translationY)));
         [self movePointCenter];
 
         [self addFilter];
@@ -90,8 +102,14 @@
 {
     _translationX = _translationX - _fgImageSize.width/2.0;
     _translationY = _translationY - _fgImageSize.height/2.0;
+//    NSLog(@"平移后点%@",NSStringFromCGPoint(CGPointMake(_translationX, _translationY)));
 }
 
+
+/**
+ fixBug: self.fgImage 每次的平移都会累加,滑动一下就累加很多,然后就看不到了....
+ 使用 self.orignal_fgImage 来记录原始的图片.
+ */
 -(void)addFilter{
     static BOOL inProgress = NO;
 
@@ -101,32 +119,23 @@
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
-        NSURL *URL1 = [[NSBundle mainBundle] URLForResource:@"overlay_fg" withExtension:@"png"];
-        CIImage * inputImage = [[CIImage alloc] initWithContentsOfURL:URL1];
+        self.fgImage = [self.orignal_fgImage imageByApplyingTransform:CGAffineTransformTranslate(CGAffineTransformIdentity, _translationX, _translationY)];
+        [self.filter setValue:self.fgImage forKey:kCIInputImageKey];
+        [self.filter setValue:self.bgImage forKey:kCIInputBackgroundImageKey];
 
-        NSURL *URL2 = [[NSBundle mainBundle] URLForResource:@"overlay_bg" withExtension:@"jpg"];
-        CIImage *bgImage = [[CIImage alloc] initWithContentsOfURL:URL2];
-
-
-        CIFilter *filter = [CIFilter filterWithName:self.filterName];
-        inputImage = [inputImage imageByApplyingTransform:CGAffineTransformMakeTranslation(_translationX, _translationY)];
-        [filter setValue:inputImage forKey:kCIInputImageKey];
-        [filter setValue:bgImage forKey:kCIInputBackgroundImageKey];
-
-        CIContext *context = [CIContext contextWithOptions:nil];
-        CGImageRef resultImage = [context createCGImage:filter.outputImage fromRect:bgImage.extent];
-        UIImage *image = [UIImage imageWithCGImage:resultImage];
+        CGImageRef resultImage = [self.context createCGImage:self.filter.outputImage fromRect:self.bgImage.extent];
         CIImage *outputImage = [CIImage imageWithCGImage:resultImage];
+        UIImage *image = [UIImage imageWithCIImage:outputImage];
         CGImageRelease(resultImage);
 
         dispatch_async(dispatch_get_main_queue(), ^{
             self.centerImageView.image = image;
-            NSLog(@"\ninputImageSize:%@\nbgImageSize:%@\nresultSize:%@\n\n",
-                  NSStringFromCGRect(inputImage.extent),
-                  NSStringFromCGRect(bgImage.extent),
-                  NSStringFromCGRect(outputImage.extent)
-                  );
-            NSLog(@"add filter:%@(%@) done.",self.filterName,[CIFilter localizedNameForFilterName:self.filterName]);
+//            NSLog(@"\ninputImageSize:%@\nbgImageSize:%@\nresultSize:%@\n\n",
+//                  NSStringFromCGRect(self.fgImage.extent),
+//                  NSStringFromCGRect(self.bgImage.extent),
+//                  NSStringFromCGRect(outputImage.extent)
+//                  );
+//            NSLog(@"add filter:%@(%@) done.",self.filterName,[CIFilter localizedNameForFilterName:self.filterName]);
             inProgress = NO;
         });
     });

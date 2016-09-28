@@ -42,28 +42,8 @@
     [self configRectView];
 
     self.filter = [CIFilter filterWithName:self.filterName];
-
     self.context = [CIContext contextWithOptions:nil];
     [self addFilter];
-
-    [self testMaxProcessSize];
-}
-
--(void)testMaxProcessSize
-{
-    NSDictionary *opts = @{ kCIContextUseSoftwareRenderer : @YES };
-    CIContext *ctx = [CIContext contextWithOptions:opts];
-    NSLog(@"inputMaxSize=%@,outputMaxSize=%@",NSStringFromCGSize([ctx inputImageMaximumSize]),NSStringFromCGSize([ctx outputImageMaximumSize]));
-
-    NSDictionary *opts2 = @{ kCIContextUseSoftwareRenderer : @NO };
-    CIContext *ctx2 = [CIContext contextWithOptions:opts2];
-    NSLog(@"inputMaxSize=%@,outputMaxSize=%@",NSStringFromCGSize([ctx2 inputImageMaximumSize]),NSStringFromCGSize([ctx2 outputImageMaximumSize]));
-
-    /*
-     output:
-      inputMaxSize={8192, 8192},outputMaxSize={8192, 8192}
-      inputMaxSize={8192, 8192},outputMaxSize={8192, 8192}
-     */
 }
 
 -(void)configRectView
@@ -84,11 +64,6 @@
     CIImage *bgImage = [[CIImage alloc] initWithContentsOfURL:URL2];
     _bgImageSize = bgImage.extent.size;
     self.bgImage =bgImage;
-
-
-    NSURL *URL3 = [NSURL URLWithString:@"https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"];
-    CIImage *testImage = [[CIImage alloc] initWithContentsOfURL:URL3];
-    NSLog(@"%@",testImage);
 
     NSURL *URL1 = [[NSBundle mainBundle] URLForResource:@"overlay_fg" withExtension:@"png"];
     CIImage * inputImage = [[CIImage alloc] initWithContentsOfURL:URL1];

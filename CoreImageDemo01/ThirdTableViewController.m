@@ -18,6 +18,9 @@
 #import "AnonymousFaceFilterVC.h"
 #import "PixellateTransitionFilterVC.h"
 #import "CICategoryColorAdjusmentVC.h"
+#import "ViewLayerCombineVC.h"
+#import "CTMViewController.h"
+
 
 @interface ThirdTableViewController ()
 @property (nonatomic,strong) NSArray *dataArray;
@@ -68,6 +71,14 @@
                        @{
                            @"title":@"图片叠加",
                            @"vcName":@"OverlayViewController",
+                           },
+                       @{
+                           @"title":@"View叠加",
+                           @"vcName":@"ViewLayerCombineVC",
+                           },
+                       @{
+                           @"title":@"CTM",
+                           @"vcName":@"CTMViewController",
                            },
                        ];
 

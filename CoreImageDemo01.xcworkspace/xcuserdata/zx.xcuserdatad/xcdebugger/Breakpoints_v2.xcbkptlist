@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoreImageDemo01/overLay/OverLayDetailViewController.m"
-            timestampString = "496570222.505901"
+            filePath = "CoreImageDemo01/ViewLayerCombineVC/CTm/CTMViewController.m"
+            timestampString = "497604235.399023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-addFilter"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

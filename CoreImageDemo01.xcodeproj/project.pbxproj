@@ -18,6 +18,8 @@
 		FB31F0861D77D17F0032699C /* boots.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0841D77D17F0032699C /* boots.jpg */; };
 		FB31F0871D77D17F0032699C /* skier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB31F0851D77D17F0032699C /* skier.jpg */; };
 		FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB31F0891D77D3080032699C /* SecondViewController.m */; };
+		FB43EDDF1D9E39BE00378798 /* ViewLayerCombineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB43EDDE1D9E39BE00378798 /* ViewLayerCombineVC.m */; };
+		FB43EDE11D9E469200378798 /* stickers_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FB43EDE01D9E469200378798 /* stickers_2.png */; };
 		FB8727321D7A596C004B9456 /* ChromaKeyFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8727311D7A596C004B9456 /* ChromaKeyFilterVC.m */; };
 		FB8727341D7A668C004B9456 /* person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8727331D7A668C004B9456 /* person@2x.png */; };
 		FB8727361D7A6693004B9456 /* beach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8727351D7A6693004B9456 /* beach@2x.png */; };
@@ -27,6 +29,7 @@
 		FB8727681D7AC483004B9456 /* TiltShiftFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8727671D7AC483004B9456 /* TiltShiftFilterVC.m */; };
 		FB87276B1D7AD26A004B9456 /* JPTiltShift.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87276A1D7AD26A004B9456 /* JPTiltShift.m */; };
 		FB87276E1D7AD52C004B9456 /* AnonymousFaceFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87276D1D7AD52C004B9456 /* AnonymousFaceFilterVC.m */; };
+		FB9B1E5A1DA8D41500CA477F /* CTMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9B1E591DA8D41500CA477F /* CTMViewController.m */; };
 		FB9D98421D7D0014008F944A /* PixellateTransitionFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9D98411D7D0014008F944A /* PixellateTransitionFilterVC.m */; };
 		FB9D98461D7D2487008F944A /* MicroPaintVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9D98451D7D2487008F944A /* MicroPaintVC.m */; };
 		FB9D98511D7D51CF008F944A /* ZXSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9D98501D7D51CF008F944A /* ZXSlider.m */; };
@@ -66,6 +69,9 @@
 		FB31F0851D77D17F0032699C /* skier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skier.jpg; sourceTree = "<group>"; };
 		FB31F0881D77D3080032699C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		FB31F0891D77D3080032699C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FB43EDDD1D9E39BE00378798 /* ViewLayerCombineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewLayerCombineVC.h; sourceTree = "<group>"; };
+		FB43EDDE1D9E39BE00378798 /* ViewLayerCombineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewLayerCombineVC.m; sourceTree = "<group>"; };
+		FB43EDE01D9E469200378798 /* stickers_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickers_2.png; sourceTree = "<group>"; };
 		FB8727301D7A596C004B9456 /* ChromaKeyFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChromaKeyFilterVC.h; path = Subclssing/ChromaKeyFilterVC.h; sourceTree = "<group>"; };
 		FB8727311D7A596C004B9456 /* ChromaKeyFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChromaKeyFilterVC.m; path = Subclssing/ChromaKeyFilterVC.m; sourceTree = "<group>"; };
 		FB8727331D7A668C004B9456 /* person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person@2x.png"; sourceTree = "<group>"; };
@@ -81,6 +87,8 @@
 		FB87276A1D7AD26A004B9456 /* JPTiltShift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPTiltShift.m; sourceTree = "<group>"; };
 		FB87276C1D7AD52C004B9456 /* AnonymousFaceFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnonymousFaceFilterVC.h; path = Subclssing/AnonymousFaceFilterVC.h; sourceTree = "<group>"; };
 		FB87276D1D7AD52C004B9456 /* AnonymousFaceFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnonymousFaceFilterVC.m; path = Subclssing/AnonymousFaceFilterVC.m; sourceTree = "<group>"; };
+		FB9B1E581DA8D41500CA477F /* CTMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTMViewController.h; path = CTm/CTMViewController.h; sourceTree = "<group>"; };
+		FB9B1E591DA8D41500CA477F /* CTMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTMViewController.m; path = CTm/CTMViewController.m; sourceTree = "<group>"; };
 		FB9D98401D7D0014008F944A /* PixellateTransitionFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PixellateTransitionFilterVC.h; path = Subclssing/PixellateTransitionFilterVC.h; sourceTree = "<group>"; };
 		FB9D98411D7D0014008F944A /* PixellateTransitionFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PixellateTransitionFilterVC.m; path = Subclssing/PixellateTransitionFilterVC.m; sourceTree = "<group>"; };
 		FB9D98441D7D2487008F944A /* MicroPaintVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MicroPaintVC.h; path = MicPaint/MicroPaintVC.h; sourceTree = "<group>"; };
@@ -189,6 +197,8 @@
 				FB9D98431D7D2464008F944A /* MicPaint */,
 				FB9D984E1D7D4B5D008F944A /* ColorAdjustment */,
 				FBC264A61D98E7E00062872D /* overLay */,
+				FB43EDD91D9E396D00378798 /* ViewLayerCombine */,
+				FB9B1E571DA8D3FD00CA477F /* CTM */,
 				FB31F0741D77B3F20032699C /* Main.storyboard */,
 				FB31F0771D77B3F20032699C /* Assets.xcassets */,
 				FB31F0791D77B3F20032699C /* LaunchScreen.storyboard */,
@@ -204,6 +214,27 @@
 				FB31F06C1D77B3F20032699C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB43EDD91D9E396D00378798 /* ViewLayerCombine */ = {
+			isa = PBXGroup;
+			children = (
+				FB43EDE01D9E469200378798 /* stickers_2.png */,
+				FB43EDDD1D9E39BE00378798 /* ViewLayerCombineVC.h */,
+				FB43EDDE1D9E39BE00378798 /* ViewLayerCombineVC.m */,
+			);
+			name = ViewLayerCombine;
+			path = ViewLayerCombineVC;
+			sourceTree = "<group>";
+		};
+		FB9B1E571DA8D3FD00CA477F /* CTM */ = {
+			isa = PBXGroup;
+			children = (
+				FB9B1E581DA8D41500CA477F /* CTMViewController.h */,
+				FB9B1E591DA8D41500CA477F /* CTMViewController.m */,
+			);
+			name = CTM;
+			path = ViewLayerCombineVC;
 			sourceTree = "<group>";
 		};
 		FB9D98431D7D2464008F944A /* MicPaint */ = {
@@ -347,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB43EDE11D9E469200378798 /* stickers_2.png in Resources */,
 				FB8727361D7A6693004B9456 /* beach@2x.png in Resources */,
 				FB31F07B1D77B3F20032699C /* LaunchScreen.storyboard in Resources */,
 				FBC264AB1D98E9890062872D /* overlay_bg.jpg in Resources */,
@@ -419,6 +451,7 @@
 			files = (
 				FBA54B1C1D79695300175396 /* CIColorInvertViewController.m in Sources */,
 				FB87275C1D7AA455004B9456 /* ChromaKeyFilter.m in Sources */,
+				FB43EDDF1D9E39BE00378798 /* ViewLayerCombineVC.m in Sources */,
 				FB8727321D7A596C004B9456 /* ChromaKeyFilterVC.m in Sources */,
 				FB31F08A1D77D3080032699C /* SecondViewController.m in Sources */,
 				FBC264B31D98F7510062872D /* filter.md in Sources */,
@@ -434,6 +467,7 @@
 				FB9D98511D7D51CF008F944A /* ZXSlider.m in Sources */,
 				FB87276B1D7AD26A004B9456 /* JPTiltShift.m in Sources */,
 				FBA54B181D79566D00175396 /* UIImage+Extension.m in Sources */,
+				FB9B1E5A1DA8D41500CA477F /* CTMViewController.m in Sources */,
 				FB9D98461D7D2487008F944A /* MicroPaintVC.m in Sources */,
 				FB8727681D7AC483004B9456 /* TiltShiftFilterVC.m in Sources */,
 				FB8727611D7AB85C004B9456 /* WhiteVignetteFaceViewController.m in Sources */,

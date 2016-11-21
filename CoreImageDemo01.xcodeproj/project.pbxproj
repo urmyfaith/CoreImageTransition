@@ -352,6 +352,7 @@
 					FB31F0671D77B3F20032699C = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = HMPLSA9ZYN;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -590,12 +591,15 @@
 			baseConfigurationReference = 7BBD0BE4A3CAD54DA3625C89 /* Pods-CoreImageDemo01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HMPLSA9ZYN;
 				INFOPLIST_FILE = CoreImageDemo01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.z2xy.CoreImageDemo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0075d1bb-6da2-4f3c-937a-6868ac048ce3";
+				PROVISIONING_PROFILE_SPECIFIER = 20170724_2;
 			};
 			name = Debug;
 		};
@@ -604,12 +608,15 @@
 			baseConfigurationReference = 3E250FA2B461BABE9A2013DA /* Pods-CoreImageDemo01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HMPLSA9ZYN;
 				INFOPLIST_FILE = CoreImageDemo01/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.z2xy.CoreImageDemo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0075d1bb-6da2-4f3c-937a-6868ac048ce3";
+				PROVISIONING_PROFILE_SPECIFIER = 20170724_2;
 			};
 			name = Release;
 		};
